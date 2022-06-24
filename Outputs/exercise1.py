@@ -1,0 +1,6 @@
+print("{:>20}".format("Hello Twitter!"))
+print("{:.3}".format("Hello Twitter!"))
+print("{:^20.1}".format("Hello Twitter!"))
+print("{:05d}".format(150))
+print("{:7d}".format(7887))
+print("{:07.3f}".format(20.02))
