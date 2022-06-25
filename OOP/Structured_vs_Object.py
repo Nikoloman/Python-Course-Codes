@@ -1,8 +1,5 @@
 """ Example of structured programming """
 
-from http import client
-
-
 def show_client(clients, id):
     for c in clients:
         if id == c["Id"]:
