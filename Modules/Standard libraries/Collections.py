@@ -1,4 +1,6 @@
-from collections import Counter
+from collections import Counter, namedtuple
+from collections import defaultdict
+from unicodedata import name
 
 list1 = [1, 2, 3, 4, 1, 2, 3, 1, 2]
 
@@ -24,3 +26,23 @@ print(count2.values()) #Prints the values (how many times a number appears)
 print(sum(count2.values())) #Total of elements in the list
 dict1 = dict(count2) #Back to dictionary 
 print(dict1)
+
+dict2 = {}
+dict2 = defaultdict(float) #Sets a default type value
+print(dict2["something"])
+print(dict2)
+
+numbers = {}
+numbers["Zero"] = "Cero"
+numbers["One"] = "Uno"
+numbers["Two"] = "Dos"
+numbers["Three"] = "Tres"
+print(numbers) #Adding ordered numbers
+
+person = namedtuple("Person", "Name Last_name Age") #We can name each value of a tuple
+p = person(Name= "Hector", Last_name= "Velázquez", Age= 21)
+print(p.Name)
+print(p.Last_name)
+print(p.Age)
+print(p)
+print(p[0]) #It can also print the values using like index
