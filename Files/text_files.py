@@ -17,3 +17,25 @@ text_3 = file.read() #Gets the text of the file in a variable
 print(text_3)
 file.close()
 
+file = open("file.txt", "r")
+lines = file.readlines() #Gets the text in the file (each line) in a list
+print(lines) #Printing all the list
+print(lines[1]) #Printing a certain line (in the list)
+file.close()
+
+file = open("file.txt", "r")
+line = file.readline() #Reads the first line
+print(line)
+line_2 = file.readline()
+print(line_2) #Reads the second line in the file
+file.close()
+
+#-------------Append-----------------
+file = open("file.txt", "a")
+file.write("\n\nFallout: New Vegas") #Adds more text to a file without changing anything
+file.close()
+
+#---------Little Exercise------------
+with open("file.txt", "r") as file:
+    for line in file:
+        print(line)
