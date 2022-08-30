@@ -41,9 +41,33 @@ class Catalog:
             print("The file is empty")
         finally:
             file.close()
-            print(f"{len(self.movies)} movies has been loaded")
 
     def save(self):
         file = open("catalog.pckl", "wb")
         pickle.dump(self.movies, file)
-        file.close() 
+        file.close()
+
+# ------------ Menu ------------
+
+print("Welcome to the Movie Catalog")
+option = 0
+while(option != 3):
+    print("\nSelect one of the following options:")
+    print("[1] Add a movie to the catalog")
+    print("[2] Show all the catalog")
+    print("[3] Exit")
+    option = int(input("Option: "))
+
+    if(option > 4 or option < 1):
+        print("Invalid option, try again\n")
+    else:
+        c = Catalog()
+
+        if(option == 1):
+            tittle = input("Insert the tittle of the movie: ")
+            duration = input("Insert the duration of the movie (minutes): ")
+            release = input("Insert the release year of the movie: ")
+            c.add(Movie(tittle, duration, release))
+
+        if(option == 2):
+            c.show()
