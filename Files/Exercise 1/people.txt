@@ -1,0 +1,4 @@
+1;Héctor;Velázquez;18/07/2001
+2;Oscar;Cabrales;07/04/2002
+3;Maximiliano;Ledezma;4/12/2001
+4;Michel;Ortíz;12/01/2002
